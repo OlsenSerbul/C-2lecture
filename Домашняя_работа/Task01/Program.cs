@@ -1,12 +1,13 @@
 ﻿// Напишите программу, которая принимает на вход трёхзначное число
 // и на выходе показывает вторую цифру этого числа.
-Console.WriteLine("Введите число : ");
+Console.WriteLine("Введите трехзначное число : ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 
-if (number / 100 > 0 && number / 1000 < 0)
+if (number >= 100  && number < 1000)
 {
-    Console.WriteLine(number= number % 100);
+    number = number / 10;
+    Console.WriteLine(number = number % 10);
 
 }
 else
