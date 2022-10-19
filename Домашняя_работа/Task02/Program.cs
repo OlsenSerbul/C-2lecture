@@ -9,6 +9,7 @@ int Number = number;
 
 // запускаем цикл с проверкой есть ли в числе третья цифра
 
+
 while (number / 100 > 0 )
 {
     if (number < 1000 && number > 100)
@@ -17,16 +18,7 @@ while (number / 100 > 0 )
         Console.WriteLine($"В числе {Number} третья цифра {number}" );
     }
     else
-    {
-        number = number / 10;
-    }
- 
+    number = number / 10;
 }
- Console.WriteLine($"В числе {Number} третьей цифры нет" );
 
-
-
- number = number % 10;
-     Console.WriteLine($"В числе {Number} третья цифра {number});
-
-     if 
+Console.WriteLine($"В числе {Number} третьей цифры нет");
