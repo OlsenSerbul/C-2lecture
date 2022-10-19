@@ -6,6 +6,13 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 int X =numberA % numberB;
-if (X > 0) Console.WriteLine($"не кратно, остаток {X} ");
+while(numberA > numberB)
+{
+
+    if (X > 0) Console.WriteLine($"не кратно, остаток {X} ");
 else
 Console.WriteLine("кратно");
+
+}
+
+Console.WriteLine("Первое число меньше второго, целочисленного остатка нет");
