@@ -5,20 +5,29 @@
 Random rnd = new Random() ;
 int number = rnd.Next();
 Console.WriteLine(number);
-int Number = number;
 
 // запускаем цикл с проверкой есть ли в числе третья цифра
-
-
-while (number / 100 > 0 )
+if (number >= 100)
 {
-    if (number < 1000 && number > 100)
+    while (number % 100 > 0)
     {
-        number = number % 10;
-        Console.WriteLine($"В числе {Number} третья цифра {number}" );
+        if (number < 1000)
+        {
+            number = number % 10;
+            Console.WriteLine($"Третья цифра {number}");
+        }
+        else
+    
+            number = number / 10;
+ 
     }
-    else
-    number = number / 10;
 }
 
-Console.WriteLine($"В числе {Number} третьей цифры нет");
+else
+{
+   Console.WriteLine($"В числе нет третьей цифры");
+    
+}
+
+
+
