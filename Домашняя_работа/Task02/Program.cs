@@ -5,24 +5,18 @@
 Random rnd = new Random() ;
 int number = rnd.Next();
 Console.WriteLine(number);
-
-// запускаем цикл с проверкой есть ли в числе третья цифра
+//  проверяем есть ли в числе третья цифра
 if (number >= 100)
+// уменьшаем число до трехзначного
 {
-    while (number % 100 > 0)
-    {
-        if (number < 1000)
-        {
-            number = number % 10;
-            Console.WriteLine($"Третья цифра {number}");
-        }
-        else
-    
-            number = number / 10;
- 
+    while (number >= 1000)
+    { 
+        number = number / 10;
     }
+ // находим остаток  от деления    
+     number = number % 10;
+     Console.WriteLine($"Третья цифра {number}");
 }
-
 else
 {
    Console.WriteLine($"В числе нет третьей цифры");
